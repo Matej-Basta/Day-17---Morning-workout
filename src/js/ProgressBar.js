@@ -1,8 +1,9 @@
 export class ProgressBar {
-  constructor(value, gradient, maxValue) {
+  constructor(value, gradient, maxValue, color) {
     this.value = value;
     this.gradient = gradient;
     this.maxValue = maxValue;
+    this.color = color;
     //@TODO no.4 make it possible to create progress bar with any default value and gradient. these values should be passed to constructor
     //@TODO no.5 make it possible to create progress bar with any maximum value. once using maximum value, make sure the width of knob element is calculated correctly
 
@@ -20,7 +21,7 @@ export class ProgressBar {
          <div class="bar">
            <div style="width:${
              (this.value / this.maxValue) * 100
-           }%" class="knob"></div>
+           }%; background-color:${this.color}" class="knob"></div>
          </div>
          <div class="btn-plus"></div>
       </div>
