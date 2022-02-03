@@ -9,8 +9,8 @@ document.addEventListener("DOMContentLoaded", () => {
   document.body.appendChild(progressBarGreen.element);
   document.body.appendChild(progressBarBlue.element);
 
-  //adding the button the functionality
-  button.addEventListener("click", () => {
+  //Interval that changes the color based on the current rgb values
+  setInterval(() => {
     //accessing the values
     const red = progressBarRed.value;
     const green = progressBarGreen.value;
@@ -24,7 +24,7 @@ document.addEventListener("DOMContentLoaded", () => {
     } else {
       button.style.color = "white";
     }
-  });
+  }, 50);
   // @TODO no.1 create new instance of ProgressBar and append its right one property to body element
   // @TODO no.2 fix missing icon on plus button
 });

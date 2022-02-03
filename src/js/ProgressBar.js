@@ -10,7 +10,6 @@ export class ProgressBar {
 
     this.element = document.createElement("div");
     this.refreshElement();
-    this.counter = 0;
   }
 
   refreshElement() {
@@ -31,6 +30,7 @@ export class ProgressBar {
 
     //accessing the plus button
     const plusBtn = this.element.querySelector(".btn-plus");
+    //providing the functionality on mousedown and up
     plusBtn.addEventListener("mousedown", () => {
       this.interval = setInterval(() => {
         this.value = Math.min(this.maxValue, this.value + this.gradient);
@@ -43,6 +43,7 @@ export class ProgressBar {
 
     //accessing the minus button;
     const minusBtn = this.element.querySelector(".btn-minus");
+    //providing the functionality on mousedown and up
     minusBtn.addEventListener("mousedown", () => {
       this.interval = setInterval(() => {
         this.value = Math.max(0, this.value - this.gradient);
